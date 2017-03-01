@@ -15,7 +15,6 @@ namespace NPS_MIMS_DataReader
             var linkItemVirtualItems = (new MIMSTextDataReader<VirtualNamespace.LinkItemVirtualItemVirtual>(VirtualFilePath("LinkItemVirtualItem"))).Load();
             var linkPackVirtualProducts = (new MIMSTextDataReader<VirtualNamespace.LinkPackVirtualProductVirtual>(VirtualFilePath("LinkPackVirtualProduct"))).Load();
             var packNames = (new MIMSTextDataReader<VirtualNamespace.PackNameVirtual>(VirtualFilePath("PackName"))).Load();
-            //var virtualEntities = (new MIMSTextDataReader<VirtualNamespace.VirtualEntitiesVirtual>(VirtualFilePath("VirtualEntities"))).Load();
             var virtualGenericItems = (new MIMSTextDataReader<VirtualNamespace.VirtualGenericItemVirtual>(VirtualFilePath("VirtualGenericItem"))).Load();
             var virtualProducts = (new MIMSTextDataReader<VirtualNamespace.VirtualProductVirtual>(VirtualFilePath("VirtualProduct"))).Load();
             var virtualSpecificItems = (new MIMSTextDataReader<VirtualNamespace.VirtualSpecificItemVirtual>(VirtualFilePath("VirtualSpecificItem"))).Load();

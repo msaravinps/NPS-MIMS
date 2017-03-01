@@ -15,12 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPS MIMS DataReader", "NPS 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadMIMSData", "ReadMIMSData\ReadMIMSData.csproj", "{D9CE27FD-5F0B-4D5A-B263-BE1027C7BA71}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95C6C78E-CE28-42E1-AC9A-9773C26F1971}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{3DC53EF0-8DA8-4EAE-8769-4848BF96734C}"
 	ProjectSection(SolutionItems) = preProject
-		Z:\MSaravi\MIMS Data Prgrms & Tools\MIMS_SearchforCMICodeinXMLFilesbyCMIName.sql = Z:\MSaravi\MIMS Data Prgrms & Tools\MIMS_SearchforCMICodeinXMLFilesbyCMIName.sql
-		Z:\MSaravi\MIMS Data Prgrms & Tools\MIMS_SelectMultipleCMIs_ForthesameProduct.sql = Z:\MSaravi\MIMS Data Prgrms & Tools\MIMS_SelectMultipleCMIs_ForthesameProduct.sql
-		Z:\MSaravi\MIMS Data Prgrms & Tools\ReadMe.txt = Z:\MSaravi\MIMS Data Prgrms & Tools\ReadMe.txt
-		Z:\MSaravi\MIMS Data Prgrms & Tools\SelectUniqueCMIwithotherpiecesofInfofromFormPackProdwithVolumeDat.sql = Z:\MSaravi\MIMS Data Prgrms & Tools\SelectUniqueCMIwithotherpiecesofInfofromFormPackProdwithVolumeDat.sql
+		Scripts\MIMS_SearchforCMI.sql = Scripts\MIMS_SearchforCMI.sql
+		Scripts\MIMS_SearchforCMICodeinXMLFilesbyCMIName.sql = Scripts\MIMS_SearchforCMICodeinXMLFilesbyCMIName.sql
+		Scripts\MIMS_SelectMultipleCMIs_ForthesameProduct.sql = Scripts\MIMS_SelectMultipleCMIs_ForthesameProduct.sql
+		Scripts\SelectUniqueCMIwithotherpiecesofInfofromFormPackProdwithVolumeDat.sql = Scripts\SelectUniqueCMIwithotherpiecesofInfofromFormPackProdwithVolumeDat.sql
 	EndProjectSection
 EndProject
 Global
