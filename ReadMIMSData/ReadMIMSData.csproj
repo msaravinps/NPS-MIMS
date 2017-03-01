@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66ADCDCC-9F20-4171-B09B-5D3ECA9640A2}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{D9CE27FD-5F0B-4D5A-B263-BE1027C7BA71}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NPS_MIMS_Models</RootNamespace>
-    <AssemblyName>NPS MIMS Models</AssemblyName>
+    <RootNamespace>ReadMIMSData</RootNamespace>
+    <AssemblyName>ReadMIMSData</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,11 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Abbreviated.cs" />
-    <Compile Include="Models\Virtual.cs" />
+    <Compile Include="Entities\AIMAN.cs" />
+    <Compile Include="Entities\AMMAN.cs" />
+    <Compile Include="Entities\CMPMAN.cs" />
+    <Compile Include="Entities\GENMAN.cs" />
+    <Compile Include="Entities\GMMAN.cs" />
+    <Compile Include="Entities\GSMMAN.cs" />
+    <Compile Include="Entities\MANBMDAT.cs" />
+    <Compile Include="Entities\MANDAT.cs" />
+    <Compile Include="Entities\MANIDDAT.cs" />
+    <Compile Include="Entities\SECTMAN.cs" />
+    <Compile Include="Entities\SUBMAN.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MIMSTextDataReader.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPS MIMS Models", "NPS MIMS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocoGenerator", "PocoGenerator\PocoGenerator.csproj", "{E07858AA-995D-4984-8CA4-E5EC1F9203FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPS MIMS DataReader", "NPS MIMS DataReader\NPS MIMS DataReader.csproj", "{5FB05064-133B-4840-9BE9-133E5D46E266}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadMIMSData", "ReadMIMSData\ReadMIMSData.csproj", "{D9CE27FD-5F0B-4D5A-B263-BE1027C7BA71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{E07858AA-995D-4984-8CA4-E5EC1F9203FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E07858AA-995D-4984-8CA4-E5EC1F9203FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E07858AA-995D-4984-8CA4-E5EC1F9203FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB05064-133B-4840-9BE9-133E5D46E266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB05064-133B-4840-9BE9-133E5D46E266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB05064-133B-4840-9BE9-133E5D46E266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB05064-133B-4840-9BE9-133E5D46E266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9CE27FD-5F0B-4D5A-B263-BE1027C7BA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9CE27FD-5F0B-4D5A-B263-BE1027C7BA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9CE27FD-5F0B-4D5A-B263-BE1027C7BA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9CE27FD-5F0B-4D5A-B263-BE1027C7BA71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
