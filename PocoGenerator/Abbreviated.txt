@@ -1,0 +1,189 @@
+﻿AIDAT
+aicode LongInt
+action Text(100)
+tfaction Text(100)
+-
+AMDAT
+prodcode LongInt
+aicode LongInt
+-
+SUBXDAT
+prodcode LongInt
+section LongInt
+subsection Text(1)
+-
+SECTDAT
+section LongInt
+title Text(255)-SUBDAT
+section LongInt
+subsection Text(1)
+prodcode LongInt
+section LongInt
+subsection Text(1)
+subtitle Text(100)
+subtext Text(255)
+headnote1 Memo
+headnote2 Memo
+headnote3 Memo
+headnote4 Memo
+-
+SPORTDAT
+sportcode Text(1)
+sportcodetxt Memo
+-
+PRODDAT
+prodcode LongInt
+product Text(100)
+section LongInt
+subsection Text(1)
+pc Text(2)
+p_text Text(3)
+cmpcode LongInt
+dis Text(255)
+cmi Text(3)
+use Memo
+ci Memo
+pr Memo
+ar Memo
+ir Memo
+wa Memo
+manpage Text(100)
+xref Text(125)
+sportcode Text(1)
+s11 Text(3)
+prodsort Text(100)
+mancode LongInt
+deleted Text(20)
+tfproduct Text(100)
+-
+RECORD
+tablename Text(255)
+num_records LongInt
+-
+FORMDAT
+prodcode LongInt
+formcode LongInt
+formsort LongInt
+form Text(60)
+rx Text(3)
+rx_text Text(255)
+co Memo
+gf Text(3)
+brand Text(100)
+da Memo
+foodcode Text(1)
+drowsy Text(3)
+CMIcode LongInt
+GenericList Memo
+tfGenericList Memo
+-
+FOODDAT
+foodcode Text(1)
+foodcodetxt Text(255)
+-
+CMPDAT
+cmpcode LongInt
+company Text(100)
+cmpabbrev Text(100)
+address1 Text(50)
+address2 Text(50)
+address3 Text(50)
+postcode Text(4)
+phone Text(20)
+fax Text(20)
+toll_free Text(20)
+email Text(50)
+web_site Text(50)
+mail_order Text(3)
+subtitle Text(100)
+-
+ANADAT
+tabledefs Text(255)
+-
+GMDAT
+prodcode LongInt
+formcode LongInt
+gencode LongInt
+GenericSort LongInt
+-
+GSMDAT
+prodcode LongInt
+formcode LongInt
+gencode LongInt
+approved LongInt
+-
+PACKDAT
+prodcode LongInt
+formcode LongInt
+packcode LongInt
+packsort LongInt
+active Text(50)
+active_units Text(20)
+per_volume Text(20)
+per_vol_units Text(20)
+unit_volume Text(20)
+unit_vol_units Text(20)
+solvent Text(100)
+misc Text(255)
+units_per_pack LongInt
+no_of_packs LongInt
+pbs_code Text(6)
+pbs Text(255)
+rp LongInt
+equiv Text(3)
+authcode LongInt
+restcode LongInt
+pbs_price Text(20)
+bpp Text(20)
+spec_contrib Text(20)
+price Text(20)
+disp_fee Text(3)
+dd_fee Text(3)
+s3r_fee Text(3)
+tgp Text(20)
+tgp_group LongInt
+sec100code LongInt
+MANcode Text(2)
+DispFeeCode Text(2)
+-
+CPYRGHT
+copyright Memo
+-
+GENDAT
+gencode LongInt
+generic Text(100)
+approved LongInt
+MIMS Text(2)
+tfgeneric Text(100)
+-
+PPSDAT
+prodcode LongInt
+formcode LongInt
+packcode LongInt
+NSW Text(2)
+VIC Text(2)
+QLD Text(2)
+WA Text(2)
+SA Text(2)
+TAS Text(2)
+ACT Text(2)
+NT Text(2)
+-
+EQUIVDAT
+prodcode1 LongInt
+formcode1 LongInt
+packcode1 LongInt
+prodcode2 LongInt
+formcode2 LongInt
+packcode2 LongInt
+-
+INDDAT
+indcode LongInt
+indication Memo
+note Memo
+AbbrevIndication Memo
+-
+ISSUE
+issue Text(255)
+EffectiveDate Text(20)
+ExpiryDate Text(20)

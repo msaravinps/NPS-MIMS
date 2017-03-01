@@ -1,0 +1,59 @@
+﻿VirtualProduct
+VirtualProductID LongInt An identifier for a virtual product
+VirtualProductGUID Text(255) FastTrack GUID of a VirtualProduct
+VirtualProduct memo
+tfVirtualProduct memo
+-
+LinkPackVirtualProduct
+prodcode LongInt Pack identifier (composite key)
+formcode LongInt Pack identifier (composite key)
+packcode LongInt Pack identifier (composite key)
+VirtualProductID LongInt Virtual Product that is linked to this pack
+-
+BrandName
+prodcode LongInt product identifier (composite key)
+formcode LongInt Form identifier (composite key)
+BrandName text(255)
+-
+PackName
+prodcode LongInt Pack identifier (composite key)
+formcode LongInt Pack identifier (composite key)
+packcode LongInt Pack identifier (composite key)
+PackName text(255)
+-
+LinkPackVirtualProduct
+prodcode LongInt Product identifier (composite key)
+formcode LongInt Form identifier (composite key)
+packcode LongInt Pack identifier (composite key)
+VirtualProductID LongInt
+-
+LinkItemVirtualItem
+prodcode LongInt Product identifier (composite key)
+formcode LongInt Form identifier (composite key)
+packcode LongInt Pack identifier (composite key)
+itemcode LongInt Item identifier (composite key)
+VirtualTherapeuticIntentID LongInt Links to table [VirtualTherapeuticIntent]
+VirtualGenericItemID LongInt Links to table [VirtualGenericItem]
+VirtualSpecificItemID LongInt 
+-
+VirtualGenericItem
+VirtualGenericItemID LongInt Primary key links to table [LinkItemVirtualItem]
+VirtualGenericItemGUID Text(255) FastTrack GUID of a VirtualGenericItem
+VirtualGenericItem Memo VirtualGenericItem name
+LongIntFormID LongInt LongInt form ID
+-
+VirtualSpecificItem
+VirtualSpecificItemID LongInt
+-
+VirtualEntities
+VirtualSpecificItemGUID Text(255) The FastTrack GUID of a VirtualSpecificItem
+VirtualSpecificItem Memo
+-
+VirtualTherapeuticIntent
+VirtualTherapeuticIntentID LongInt Primary key links to table [LinkItemVirtualItem]
+VirtualTherapeuticIntent Memo Active ingredient names of a product
+isManyIngredients Yes/No
+-
+ISSUE
+Issue text(255) Dateline for this issue
+IssueID text(50)
