@@ -11,6 +11,12 @@ namespace NPS_MIMS_DataReader
     {
         static void Main(string[] args)
         {
+            var program = new Program();
+            program.Start();
+        }
+
+        void Start()
+        {
             var brandNames = (new MIMSTextDataReader<VirtualNamespace.BrandNameVirtual>(VirtualFilePath("BrandName"))).Load();
             var linkItemVirtualItems = (new MIMSTextDataReader<VirtualNamespace.LinkItemVirtualItemVirtual>(VirtualFilePath("LinkItemVirtualItem"))).Load();
             var linkPackVirtualProducts = (new MIMSTextDataReader<VirtualNamespace.LinkPackVirtualProductVirtual>(VirtualFilePath("LinkPackVirtualProduct"))).Load();
@@ -20,7 +26,8 @@ namespace NPS_MIMS_DataReader
             var virtualSpecificItems = (new MIMSTextDataReader<VirtualNamespace.VirtualSpecificItemVirtual>(VirtualFilePath("VirtualSpecificItem"))).Load();
             var virtualTherapeuticIntents = (new MIMSTextDataReader<VirtualNamespace.VirtualTherapeuticIntentVirtual>(VirtualFilePath("VirtualTherapeuticIntent"))).Load();
         }
-        static string VirtualFilePath(string name)
+
+        string VirtualFilePath(string name)
         {
             return $@"Z:\MSaravi\MIMS-Sample\VirtualEntities20170300\{name}.txt";
         }

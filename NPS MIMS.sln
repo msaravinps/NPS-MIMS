@@ -21,6 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{3DC5
 		Scripts\MIMS_SearchforCMICodeinXMLFilesbyCMIName.sql = Scripts\MIMS_SearchforCMICodeinXMLFilesbyCMIName.sql
 		Scripts\MIMS_SelectMultipleCMIs_ForthesameProduct.sql = Scripts\MIMS_SelectMultipleCMIs_ForthesameProduct.sql
 		Scripts\SelectUniqueCMIwithotherpiecesofInfofromFormPackProdwithVolumeDat.sql = Scripts\SelectUniqueCMIwithotherpiecesofInfofromFormPackProdwithVolumeDat.sql
+		Scripts\SelectUniqueCMIwithotherpiecesofInfofromFormPackProdwithVolumeDat_Pretty.sql = Scripts\SelectUniqueCMIwithotherpiecesofInfofromFormPackProdwithVolumeDat_Pretty.sql
 	EndProjectSection
 EndProject
 Global
