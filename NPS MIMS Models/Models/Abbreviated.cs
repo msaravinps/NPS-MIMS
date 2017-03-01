@@ -26,7 +26,6 @@ namespace AbbreviatedPocoNamespace
     {
         public long section { get; set; }
         public string subsection { get; set; }
-        public long prodcode { get; set; }
         public string subtitle { get; set; }
         public string subtext { get; set; }
         public string headnote1 { get; set; }
