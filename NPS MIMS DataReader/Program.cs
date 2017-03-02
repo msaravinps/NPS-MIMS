@@ -7,6 +7,29 @@ using System.Threading.Tasks;
 
 namespace NPS_MIMS_DataReader
 {
+    class Res
+    {
+        public string Form { get; set; }
+        public string Brand { get; set; }
+        public string BrandName { get; set; }
+        public string CompanyName { get; set; }
+        public string Title { get; set; }
+        public string ScheduleClassification { get; set; }
+        public string Strength { get; set; }
+        public string PerVolume { get; set; }
+        public string ActiveIngredient { get; set; }
+        public string UnitVolume { get; set; }
+        public long FORMDATformcode { get; set; }
+        public long FORMDATprodcode { get; set; }
+        public long FORMDATcmpcode { get; set; }
+        public long BrandNameVirtualformcode { get; set; }
+        public long BrandNameVirtualprodcode { get; set; }
+        public long PACKDATprodcode { get; set; }
+        public long PACKDATformcode { get; set; }
+        public long PRODDATprodcode { get; set; }
+        public long PRODDATcmpcode { get; set; }
+        public long CMPDATcmpcode { get; set; }
+    }
     class Program
     {
         static void Main(string[] args)
@@ -46,6 +69,21 @@ namespace NPS_MIMS_DataReader
             var PPSDATs = (new MIMSTextDataReader<AbbreviatedPocoNamespace.PPSDAT>(AbbreviatedFilePath("PPSDAT"))).Load();
             var EQUIVDATs = (new MIMSTextDataReader<AbbreviatedPocoNamespace.EQUIVDAT>(AbbreviatedFilePath("EQUIVDAT"))).Load();
             var INDDATs = (new MIMSTextDataReader<AbbreviatedPocoNamespace.INDDAT>(AbbreviatedFilePath("INDDAT"))).Load();
+            var result = (from formdat in FORMDATs select new Res { FORMDATformcode = formdat.formcode, PRODDATprodcode = formdat.prodcode, Form = formdat.form, Brand = formdat.brand, ScheduleClassification = formdat.rx_text, ActiveIngredient = formdat.GenericList }).
+                            Union(from brandname in brandNames select new Res { BrandNameVirtualformcode = brandname.formcode, BrandNameVirtualprodcode = brandname.prodcode, BrandName = brandname.BrandName, Title = brandname.BrandName, Form = "" }).
+                            Union(from packdat in PACKDATs select new Res { PACKDATprodcode = packdat.prodcode, PACKDATformcode = packdat.formcode, Strength = packdat.active + " " + packdat.active_units, PerVolume = packdat.per_volume + " " + packdat.per_vol_units, UnitVolume = packdat.unit_volume + " " + packdat.unit_vol_units }).
+                            Union(from cmpdat in CMPDATs select new Res { CMPDATcmpcode = cmpdat.cmpcode, CompanyName = cmpdat.company }).
+                            Union(from proddat in PRODDATs select new Res { PRODDATcmpcode = proddat.cmpcode, PRODDATprodcode = proddat.prodcode }).
+                            Where(r =>
+                            r.FORMDATformcode == r.BrandNameVirtualformcode &&
+                            r.FORMDATprodcode == r.BrandNameVirtualprodcode &&
+                            r.FORMDATprodcode == r.PACKDATprodcode &&
+                            r.FORMDATformcode == r.PACKDATformcode &&
+                            r.FORMDATprodcode == r.PRODDATprodcode &&
+                            r.PRODDATcmpcode == r.CMPDATcmpcode
+                            )
+                            .ToList();
+
         }
 
         string VirtualFilePath(string name)

@@ -19,8 +19,10 @@ namespace NPS_MIMS_DataReader.Services
             var data = new List<T>();
             using (var input = new StreamReader(_filePath))
             {
+                var count = 0;
                 while (true)
                 {
+                    if (++count > 3) break;
                     var line = input.ReadLine();
                     if (string.IsNullOrEmpty(line))
                         break;
